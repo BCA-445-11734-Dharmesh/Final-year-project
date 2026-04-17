@@ -1,4 +1,4 @@
-# FitCore Pro - Gym Management System
+# FitZone Pro - Gym Management System
 ## Enhanced Version - Security & Feature Improvements
 
 ---
