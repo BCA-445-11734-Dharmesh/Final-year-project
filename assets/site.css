@@ -1,0 +1,408 @@
+:root{
+  --brand: #10b981;
+  --bg: #0b1220;
+  --text: #f1f8ff;
+  --muted: #9fb3c8;
+  --card-bg: rgba(255,255,255,0.06);
+  --card-border: rgba(255,255,255,0.08);
+}
+html,body{height:100%;}
+body{font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background: linear-gradient(180deg,var(--bg) 0%, #0f1724 100%); color:var(--text);}
+.container-max{max-width:1200px;margin:0 auto;padding:0 1rem;}
+a,button{transition:all .18s ease;border-radius:8px}
+button, .btn{cursor:pointer}
+input[type="text"], input[type="number"], textarea, select{border-radius:8px;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.03);color:var(--text)}
+.card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:14px;padding:1rem}
+:root{
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --muted: #6b7280;
+  --text: #0f1724;
+  --brand: #0ea5a3; /* soft teal */
+  --card-border: rgba(15,23,36,0.06);
+  --shadow: 0 6px 20px rgba(15,23,36,0.06);
+}
+
+html, body { height: 100%; }
+body {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #f8fafb 0%, var(--bg) 100%);
+  color: var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+
+.container-max { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+a, button { transition: all .18s ease; border-radius: 8px; }
+button, .btn { cursor: pointer; }
+
+/* Inputs / selects */
+input[type="text"], input[type="number"], textarea, select {
+  border-radius: 10px;
+  border: 1px solid var(--card-border);
+  background: var(--surface);
+  color: var(--text);
+  padding: 0.6rem 0.9rem;
+}
+
+.card { background: var(--surface); border: 1px solid var(--card-border); border-radius: 12px; padding: 1rem; box-shadow: var(--shadow); }
+.muted { color: var(--muted); }
+.site-footer { padding: 2rem 0; text-align: center; color: var(--muted); font-size: 0.9rem; }
+.btn-primary { background: var(--brand); color: #fff; padding: 0.6rem 1rem; border: none; }
+.btn-ghost { background: transparent; border: 1px solid rgba(15,23,36,0.06); color: var(--text); padding: 0.5rem 0.75rem; }
+.small { font-size: 0.85rem; }
+
+/* responsive helpers */
+@media (max-width:768px){ .container-max{ padding:0 0.75rem } }
+
+/* images/videos */
+img, video { max-width:100%; height:auto; border-radius:8px }
+
+/* Typography helpers matching Tailwind naming used in templates */
+.text-gray-800, .text-gray-900, .text-gray-700, .text-gray-600 { color: var(--text) !important; }
+.text-gray-500, .text-gray-400 { color: var(--muted) !important; }
+
+/* Soften light panels */
+.bg-white { background: var(--surface) !important; border: 1px solid var(--card-border) !important; color: var(--text) !important; }
+
+/* Headings within main content */
+.flex-1 h1, .flex-1 h2, .flex-1 h3, .flex-1 h4, .flex-1 th { color: var(--text) !important; }
+.flex-1 .text-gray-600, .flex-1 .text-gray-500 { color: var(--muted) !important; }
+
+/* Sidebar adjustments (lighten where templates use dark classes) */
+.w-64 { background: #0f1724 !important; }
+.w-64 a, .w-64 .text-gray-400 { color: rgba(255,255,255,0.85) !important; }
+
+/* Tables */
+table { width:100%; border-collapse: collapse; }
+thead th { background: #f3f6f8; color: var(--text); border-bottom: 1px solid rgba(15,23,36,0.06); }
+tbody tr td { color: var(--text); border-bottom: 1px solid rgba(15,23,36,0.04); }
+
+/* Cards/rows for payments list — clean light look */
+.payments-page .bg-white { background: var(--surface) !important; box-shadow: none !important; }
+.payments-page .bg-white * { color: var(--text) !important; opacity: 1 !important; }
+
+/* Buttons */
+.bg-emerald-600, .bg-emerald-600:hover { background: var(--brand) !important; }
+
+/* Small utilities */
+.muted { color: var(--muted) !important; }
+.text-emerald-600 { color: var(--brand) !important; }
+
+/* Form focus */
+input:focus, textarea:focus, select:focus { outline: none; box-shadow: 0 0 0 4px rgba(14,165,163,0.08); }
+
+/* Make badges and status elements subtle */
+.px-3.py-1.rounded-full { background: rgba(14,165,163,0.08); color: var(--brand) !important; font-weight:700 }
+
+/* Ensure other interactive elements are comfortable */
+a:hover { text-decoration: underline; }
+
+/* Keep CSS concise: additional page-specific fine-tuning can be added on request */
+
+/* MEMBER AREA: soften and desaturate colors for a lighter, gentler appearance */
+.member-page .card, .member-page .bg-white {
+  background: #fbfcfd !important; /* very light surface */
+  border: 1px solid rgba(15,23,36,0.04) !important;
+  box-shadow: 0 6px 16px rgba(15,23,36,0.04) !important;
+}
+
+.member-page h2, .member-page h3, .membership-page h2, .payments-page h2 {
+  color: #0f1724 !important;
+  opacity: 0.95 !important;
+}
+
+.member-page .muted, .membership-page .muted, .payments-page .muted {
+  color: #6b7280 !important; /* soft muted gray */
+}
+
+.member-page .btn-primary, .membership-page .btn-primary, .payments-page .btn-primary {
+  background: #7fbf9a !important; /* lighter mint */
+  box-shadow: none !important;
+}
+
+.member-page input, .member-page select, .member-page textarea,
+.membership-page input, .membership-page select, .membership-page textarea,
+.payments-page input, .payments-page select, .payments-page textarea {
+  background: #ffffff !important;
+  border: 1px solid rgba(15,23,36,0.06) !important;
+  color: #0f1724 !important;
+}
+
+.member-page .bg-emerald-50, .membership-page .bg-emerald-50, .payments-page .bg-emerald-50 {
+  background: rgba(127,191,154,0.06) !important;
+  color: #0f1724 !important;
+}
+
+.member-page .text-emerald-600, .membership-page .text-emerald-600, .payments-page .text-emerald-600 {
+  color: #7fbf9a !important;
+}
+
+.membership-page .membership-card h3,
+.membership-page .membership-card p,
+.membership-page .membership-card .muted {
+  color: var(--text) !important;
+}
+
+/* Ensure thin separators and small labels remain visible */
+.membership-page .membership-card .text-sm,
+.membership-page .membership-card .text-xs {
+  color: var(--muted) !important;
+}
+
+/* Payments page specific contrast fixes */
+.payments-page .bg-emerald-50 {
+  background: linear-gradient(180deg, rgba(127,191,154,0.12), rgba(127,191,154,0.06)) !important;
+  color: var(--text) !important;
+}
+
+.payments-page .bg-white {
+  background: var(--card-bg) !important;
+  color: var(--text) !important;
+}
+
+.payments-page table thead th {
+  background: rgba(255,255,255,0.06) !important;
+  color: var(--text) !important;
+}
+
+.payments-page table tbody tr td {
+  color: var(--text) !important;
+}
+
+/* Ensure all text inside payments cards is high-contrast */
+.payments-page .bg-white * {
+  color: var(--text) !important;
+}
+
+/* Make muted and small labels inside payment cards slightly brighter */
+.payments-page .bg-white .text-gray-400,
+.payments-page .bg-white .text-gray-500,
+.payments-page .bg-white .opacity-50 {
+  color: rgba(255,255,255,0.78) !important;
+}
+
+/* Ensure amounts and badges remain prominent */
+.payments-page .bg-white .text-emerald-600,
+.payments-page .bg-white .text-blue-600,
+.payments-page .bg-white .font-bold {
+  color: var(--brand) !important;
+}
+
+/* Strong override: make all content inside payment cards dark and fully opaque for readability */
+.payments-page .bg-white {
+  background: #ffffff !important;
+}
+.payments-page .bg-white * {
+  color: #0b1220 !important;
+  opacity: 1 !important;
+}
+
+/* Keep amounts and badges colored appropriately */
+.payments-page .bg-white .text-emerald-600, .payments-page .bg-white .text-emerald-700 {
+  color: var(--brand) !important;
+}
+.payments-page .bg-white .text-blue-600 {
+  color: #2563eb !important;
+}
+
+/* Ensure small muted labels inside cards are visible */
+.payments-page .bg-white .text-xs, .payments-page .bg-white .text-sm, .payments-page .bg-white .muted {
+  color: rgba(0,0,0,0.65) !important;
+}
+
+.payments-page table tbody tr:hover {
+  background: rgba(255,255,255,0.02) !important;
+}
+
+/* Make status badges readable */
+.payments-page .bg-emerald-100 { background: rgba(127,191,154,0.06) !important; color: var(--text) !important; }
+.payments-page .text-emerald-700 { color: var(--text) !important; }
+
+/* Input caret color and focus outline for better visibility */
+.payments-page input, .payments-page textarea, .payments-page select {
+  caret-color: var(--brand) !important;
+}
+
+/* Ensure interactive elements show pointer */
+.payments-page a, .payments-page button { cursor: pointer; }
+
+/* Improve select/input contrast and styling on payments page */
+.payments-page select,
+.payments-page input[type="text"],
+.payments-page input[type="number"],
+.payments-page textarea {
+  background: var(--card-bg) !important;
+  color: var(--text) !important;
+  border: 1px solid rgba(127,191,154,0.10) !important;
+  padding: 0.8rem 1rem !important;
+  border-radius: 10px !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}
+
+.payments-page select:focus,
+.payments-page input:focus,
+.payments-page textarea:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 4px rgba(127,191,154,0.06) !important;
+}
+
+.payments-page select::placeholder,
+.payments-page input::placeholder,
+.payments-page textarea::placeholder {
+  color: rgba(255,255,255,0.45) !important;
+}
+
+/* Style dropdown options where supported */
+payments-page option {
+  background: rgba(127,191,154,0.18) !important;
+  color: var(--text) !important;
+}
+
+/* Stronger rules for select/option on both payments and membership pages */
+.payments-page select, .membership-page select {
+  color: var(--text) !important;
+  -webkit-text-fill-color: var(--text) !important; /* Safari/Chrome */
+  background: var(--card-bg) !important;
+}
+
+.payments-page option, .membership-page option {
+  background: rgba(127,191,154,0.22) !important;
+  color: var(--text) !important;
+}
+
+.payments-page option:hover, .membership-page option:hover,
+.payments-page option:checked, .membership-page option:checked {
+  background: rgba(127,191,154,0.10) !important;
+  color: var(--text) !important;
+}
+
+/* For browsers that render native white dropdowns, increase the select's z-index and use a subtle inset shadow to mask bright backgrounds */
+.payments-page select, .membership-page select {
+  position: relative;
+  z-index: 50;
+  box-shadow: inset 0 0 0 1000px rgba(127,191,154,0.08) !important;
+}
+
+/* Force the plan select placeholder to be black for visibility */
+.membership-page .plan-select {
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+  background: #ffffff !important;
+  box-shadow: none !important;
+  border: 1px solid rgba(0,0,0,0.12) !important;
+}
+.membership-page .plan-select option {
+  background: #ffffff !important;
+  color: #000 !important;
+}
+
+/* Admin page form contrast overrides */
+.admin-page input[type="text"], .admin-page input[type="number"], .admin-page textarea, .admin-page select {
+  background: #ffffff !important;
+  color: #000 !important;
+  border: 1px solid rgba(0,0,0,0.12) !important;
+}
+
+.admin-page select {
+  -webkit-text-fill-color: #000 !important;
+  box-shadow: none !important;
+}
+
+.admin-page option {
+  background: #fff !important;
+  color: #000 !important;
+}
+
+/* Admin caret and cursor fixes */
+.admin-page input, .admin-page textarea {
+  caret-color: #000 !important;
+}
+
+.admin-page select {
+  cursor: pointer !important;
+  -webkit-appearance: menulist-button !important;
+}
+
+/* Hide default select arrow on WebKit so our arrow shows consistently */
+.admin-page select::-ms-expand { display: none; }
+.admin-page select::-webkit-inner-spin-button, .admin-page select::-webkit-outer-spin-button { appearance: none; }
+
+/* Ensure disabled placeholder option in admin selects is visible and black */
+.admin-page select option[disabled] {
+  color: #666 !important;
+}
+
+/* If the placeholder (empty) option is selected, show muted placeholder color */
+.membership-page select:invalid, .payments-page select:invalid {
+  color: rgba(255,255,255,0.65) !important;
+}
+
+/* Ensure options use high contrast text when listed */
+.membership-page option, .payments-page option {
+  color: var(--text) !important;
+}
+
+/* Ensure primary action is prominent */
+.payments-page .btn-primary {
+  background: var(--brand) !important;
+  color: #fff !important;
+  padding: 1rem 1.25rem !important;
+  font-weight: 700 !important;
+}
+
+/* Make select arrow more visible */
+.payments-page select {
+  background-image: linear-gradient(45deg, transparent 50%, rgba(255,255,255,0.9) 50%),
+                    linear-gradient(135deg, rgba(255,255,255,0.9) 50%, transparent 50%);
+  background-position: calc(100% - 1.25rem) calc(50% - 0.15rem), calc(100% - 0.75rem) calc(50% - 0.15rem);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}
+
+/* caret color already set globally; ensure high contrast on focused inputs */
+.payments-page input:focus {
+  caret-color: var(--brand) !important;
+}
+
+/* Membership benefits - increase contrast for benefit items */
+.membership-page .bg-emerald-50,
+.membership-page .bg-blue-50,
+.membership-page .bg-purple-50,
+.membership-page .bg-indigo-50 {
+  background: rgba(255,255,255,0.03) !important;
+  color: var(--text) !important;
+}
+
+.membership-page .flex.items-center.p-4 {
+  background: rgba(0,0,0,0.06) !important;
+  color: var(--text) !important;
+  border-radius: 10px;
+}
+
+.membership-page .flex.items-center.p-4 i {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: rgba(255,255,255,0.04) !important;
+  color: var(--brand) !important;
+}
+
+.membership-page .flex.items-center.p-4 p,
+.membership-page .flex.items-center.p-4 .font-bold {
+  color: var(--text) !important;
+}
+
+.membership-page .space-y-3 > .flex.items-center.p-4 + .flex.items-center.p-4 {
+  margin-top: 0.75rem;
+}
+
+/* Member page overall background (light, gentle tint) */
+.member-page {
+  background: linear-gradient(180deg, #fbfefb 0%, #f6fbf6 100%) !important;
+  padding-top: 1.5rem !important;
+  padding-bottom: 2.5rem !important;
+}
+
+/* Ensure main content inside member wrapper sits on a soft surface */
+.member-page .container-max { background: transparent !important; }
+

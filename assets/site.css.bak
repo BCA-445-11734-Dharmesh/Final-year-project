@@ -1,0 +1,70 @@
+:root{
+  --brand: #10b981;
+  --bg: #0b1220;
+  --text: #f1f8ff;
+  --muted: #9fb3c8;
+  --card-bg: rgba(255,255,255,0.06);
+  --card-border: rgba(255,255,255,0.08);
+}
+html,body{height:100%;}
+body{font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background: linear-gradient(180deg,var(--bg) 0%, #0f1724 100%); color:var(--text);}
+.container-max{max-width:1200px;margin:0 auto;padding:0 1rem;}
+a,button{transition:all .18s ease;border-radius:8px}
+button, .btn{cursor:pointer}
+input[type="text"], input[type="number"], textarea, select{border-radius:8px;border:1px solid rgba(255,255,255,0.12);background:rgba(255,255,255,0.03);color:var(--text)}
+.card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:14px;padding:1rem}
+.muted{color:var(--muted)}
+.site-footer{padding:2rem 0;text-align:center;color:var(--muted);font-size:0.9rem}
+.btn-primary{background:var(--brand);color:#fff;padding:0.6rem 1rem;border:none}
+.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.12);color:var(--text);padding:0.5rem 0.75rem}
+.small{font-size:0.85rem}
+
+/* responsive helpers */
+@media (max-width:768px){
+  .container-max{padding:0 0.75rem}
+}
+
+/* smooth images/videos */
+img,video{max-width:100%;height:auto;border-radius:8px}
+
+/* Override common Tailwind dark text classes which become invisible on our dark theme */
+.text-gray-800, .text-gray-900, .text-gray-700, .text-gray-600 {
+  color: var(--text) !important;
+}
+
+/* Make .bg-white softer on dark background (used by many pages) */
+.bg-white {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--card-border) !important;
+  color: var(--text) !important;
+}
+
+/* Improve muted text visibility */
+.text-gray-500, .text-gray-400 {
+  color: var(--muted) !important;
+}
+
+/* Fix dark emerald text variants that are low-contrast on dark backgrounds */
+.text-emerald-900, .text-emerald-800 {
+  color: var(--text) !important;
+}
+
+/* Soften very light emerald backgrounds used for badges/panels */
+.bg-emerald-50 {
+  background: rgba(16,185,129,0.05) !important;
+  color: var(--text) !important;
+}
+.bg-emerald-100 {
+  background: rgba(16,185,129,0.06) !important;
+  color: var(--text) !important;
+}
+
+/* Ensure headings and table headers inside main content area are visible on dark background */
+.flex-1 h1, .flex-1 h2, .flex-1 h3, .flex-1 h4, .flex-1 th {
+  color: var(--text) !important;
+}
+
+/* Make common muted labels inside main content slightly brighter */
+.flex-1 .text-gray-600, .flex-1 .text-gray-500 {
+  color: var(--muted) !important;
+}
